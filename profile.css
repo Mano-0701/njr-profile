@@ -1,0 +1,238 @@
+/* -------------------- BASIC RESET -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: white;
+    line-height: 1.5;
+}
+
+/* -------------------- NAVBAR -------------------- */
+.navbar {
+    background: #111;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    margin: 10px 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: cyan;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: whitesmoke;
+}
+
+/* -------------------- HEADER -------------------- */
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: cyan;
+}
+
+/* -------------------- IMAGE SECTION -------------------- */
+.image-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-section img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px cyan;
+    animation: pop 0.8s ease-in-out;
+}
+
+/* -------------------- ABOUT -------------------- */
+.about {
+    padding: 20px;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* -------------------- TEAMS -------------------- */
+.teams {
+    text-align: center;
+    padding: 20px;
+}
+
+.teams ul {
+    list-style: none;
+}
+
+.teams ul li {
+    margin: 8px 0;
+}
+
+.teams ul li a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.teams ul li a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------- SKILLS -------------------- */
+.skills {
+    text-align: center;
+    padding: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.skill {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    background: #222;
+}
+
+.hover-text {
+    display: none;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.skill:hover .hover-text {
+    display: block;
+}
+
+/* -------------------- STATS TABLE -------------------- */
+.stats-section {
+    text-align: center;
+    padding: 30px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: black;
+}
+
+th, td {
+    border: 2px solid cyan;
+    padding: 10px;
+}
+
+th {
+    background: #111;
+    color: cyan;
+    font-weight: bold;
+}
+
+/* -------------------- LOGOS -------------------- */
+.logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.logos img {
+    width: 100px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.logos img:hover {
+    transform: scale(1.15);
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: cyan;
+}
+
+.copy {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* -------------------- RESPONSIVE (MEDIA QUERIES) -------------------- */
+
+/* ---------- MOBILE SCREEN: max-width 600px ---------- */
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .image-section img {
+        width: 220px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------- TABLET SCREEN: max-width 900px ---------- */
+@media (max-width: 900px) {
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+
+    table {
+        width: 95%;
+    }
+}
